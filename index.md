@@ -8,7 +8,7 @@ Maybe about research creation.
 
 - [Meme - Comics](comics.jpg)
 - [Hypertext - Twine](CriticalMaking.html)
-- [Bitsy]()
+- [Bitsy](bitsygame.html)
 - [Narratives - Cherry Blossom - p5.js]()
 - [Code - Chilling Scenes - p5.js]()
 
