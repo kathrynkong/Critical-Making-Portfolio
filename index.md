@@ -9,4 +9,4 @@ Maybe about research creation.
 - [Comics]()
 - [Twine]()
 - [Bitsy]()
-- [Narratives - Cherry Blossom - p5.js](cherry.html)
+- [Narratives - Cherry Blossom - p5.js](index.html)
