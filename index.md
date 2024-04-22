@@ -9,8 +9,8 @@ Maybe about research creation.
 - [Comics]()
 - [Hypertext - Twine](CriticalMaking.html)
 - [Bitsy]()
-- [Narratives - Cherry Blossom - p5.js](index.html)
-- [Code - Chilling Scenes - p5.js](scene.html)
+- [Narratives - Cherry Blossom - p5.js]()
+- [Code - Chilling Scenes - p5.js]()
 
 ## Links to Other Works
 
