@@ -6,7 +6,7 @@ Maybe about research creation.
 
 ## Links to My Work for the Critical Making Class
 
-- [Comics]()
+- [Meme - Comics](comics.jpg)
 - [Hypertext - Twine](CriticalMaking.html)
 - [Bitsy]()
 - [Narratives - Cherry Blossom - p5.js]()
