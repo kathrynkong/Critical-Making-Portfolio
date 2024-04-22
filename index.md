@@ -10,7 +10,7 @@ Maybe about research creation.
 - [Hypertext - Twine](CriticalMaking.html)
 - [Minigame Learning Chinese - Bitsy](Bitsygame.html)
 - [Grammar - Tracery](Grammar.html)
-- [Narratives - Cherry Blossom - p5.js]()
+- [Narratives - Cherry Blossom - p5.js](indexjs.html)
 - [Code - Chilling Scenes - p5.js](scene.html)
 
 ## Links to Other Works
