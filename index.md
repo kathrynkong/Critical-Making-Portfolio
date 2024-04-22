@@ -8,10 +8,10 @@ Maybe about research creation.
 
 - [Meme - Comics](comics.jpg)
 - [Hypertext - Twine](CriticalMaking.html)
-- [Minigame Learning Chinese - Bitsy](bitsygame.html)
+- [Minigame Learning Chinese - Bitsy](Bitsygame.html)
 - [Grammar - Tracery](Grammar.html)
 - [Narratives - Cherry Blossom - p5.js]()
-- [Code - Chilling Scenes - p5.js]()
+- [Code - Chilling Scenes - p5.js](scene.html)
 
 ## Links to Other Works
 

@@ -6,23 +6,23 @@
 
 <meta charset="UTF-8">
 
-<title>Write your game's title here</title>
+<title>Whisker's Journey: A Lost Cat's Tale Across China</title>
 
 <script type="text/bitsyGameData" id="exportedGameData">
-Write your game's title here
+Whisker's Journey: A Lost Cat's Tale Across China
 
-# BITSY VERSION 8.10
+# BITSY VERSION 8.9
 
 ! VER_MAJ 8
-! VER_MIN 10
+! VER_MIN 9
 ! ROOM_FORMAT 1
 ! DLG_COMPAT 0
 ! TXT_MODE 0
 
 PAL 0
-0,82,204
-128,159,255
-255,255,255
+254,246,131
+149,153,255
+255,254,254
 NAME blueprint
 
 ROOM 0
@@ -42,33 +42,119 @@ ROOM 0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-NAME example room
+NAME Food Hunting Adventure
+EXT 2,2 3 13,13
 PAL 0
 TUNE 2
+
+ROOM 3
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,b
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,b,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,b,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,b,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,b,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,b,b,b,0,0,0,0,0,0
+0,0,0,0,0,0,0,b,b,b,0,0,0,0,0,0
+0,0,0,0,0,0,0,b,b,b,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,b,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,b,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,b,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,b,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,b,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+b,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME Internet Restriction Navigation
+EXT 13,13 0 2,2
+PAL 0
+
+ROOM 4
+0,0,0,0,d,0,0,0,d,0,0,0,d,0,0,0
+e,e,e,e,d,e,e,e,d,e,e,e,d,e,e,e
+c,c,c,c,d,c,c,c,d,c,c,c,d,c,c,c
+e,e,e,e,d,e,e,e,d,e,e,e,d,e,e,e
+e,e,e,e,d,e,e,e,d,e,e,e,d,e,e,e
+e,e,e,e,d,e,e,e,d,e,e,e,d,e,e,e
+e,e,e,e,d,e,e,e,d,e,e,e,d,e,e,e
+c,c,c,c,d,c,c,c,d,c,c,c,d,c,c,c
+e,e,e,e,d,e,e,e,d,e,e,e,d,e,e,e
+e,e,e,e,d,e,e,e,d,e,e,e,d,e,e,e
+e,e,e,e,d,e,e,e,d,e,e,e,d,e,e,e
+e,e,e,e,d,e,e,e,d,e,e,e,d,e,e,e
+c,c,c,c,d,c,c,c,d,c,c,c,d,c,c,c
+e,e,e,e,d,e,e,e,d,e,e,e,d,e,e,e
+e,e,e,e,d,e,e,e,d,e,e,e,d,e,e,e
+e,e,e,e,d,e,e,e,d,e,e,e,d,e,e,e
+NAME Subway
+PAL 0
 
 TIL a
 11111111
 10000001
-10000001
-10011001
-10011001
-10000001
+10111101
+10111101
+10111101
+10111101
 10000001
 11111111
 NAME block
+WAL true
 
-SPR A
-00011000
-00011000
-00011000
-00111100
-01111110
+TIL b
+11100111
+10000001
 10111101
 00100100
 00100100
-POS 0 4,4
+10111101
+10000001
+11100111
 
-SPR a
+TIL c
+00000000
+00000000
+00000000
+11111111
+01010101
+11111111
+00000000
+00000000
+NAME subway
+
+TIL d
+00010100
+00011100
+00010100
+00011100
+00010100
+00011100
+00010100
+00011100
+NAME subway 2
+WAL false
+
+TIL e
+10000001
+01000010
+00100110
+00011100
+00011000
+00110100
+11100010
+10000001
+NAME nonwalkable
+WAL true
+
+SPR A
+00000000
+00000000
+01010001
+01110001
+01110010
+00111100
+00111100
+00100100
+>
 00000000
 00000000
 01010001
@@ -77,10 +163,98 @@ SPR a
 01111100
 00111100
 00100100
-NAME cat
+POS 0 5,3
+
+SPR a
+00000000
+00000000
+00001000
+01111100
+11110110
+01111100
+00001000
+00000000
+NAME Fish
 DLG 0
-POS 0 8,12
+POS 0 11,11
 BLIP 1
+
+SPR b
+00000000
+00111000
+00001000
+00111000
+00100000
+00000000
+00100000
+00000000
+NAME Start
+DLG 4
+POS 0 6,3
+
+SPR c
+00000000
+00011100
+00010000
+00111100
+00111100
+00111100
+00111100
+00000000
+NAME Milk
+DLG 5
+POS 0 12,4
+
+SPR d
+00000000
+00111110
+00011100
+00011100
+10011100
+01011000
+01111000
+00101000
+NAME Cat nanny
+DLG 7
+POS 3 11,1
+
+SPR e
+00000000
+00000000
+00001010
+11001110
+01111110
+00111110
+00110110
+00000000
+NAME kitty
+DLG 8
+POS 3 1,11
+
+SPR f
+00000000
+01000001
+01100011
+01110111
+01011101
+01011101
+01001001
+00000000
+NAME Metro
+DLG 9
+POS 3 15,15
+
+SPR g
+00000000
+00011000
+00111100
+01111110
+11111111
+00011000
+00011000
+00111100
+NAME airport
+POS 4 12,15
 
 ITM 0
 00000000
@@ -108,8 +282,8 @@ DLG 2
 BLIP 2
 
 DLG 0
-I'm a cat
-NAME cat dialog
+Whisker feels purrfectly energized! 你学会了新词：鱼 yú (You learned a new word: fish). {exit "Internet Restriction Navigation" 5 6 "tunnel"}
+NAME Fish dialog
 
 DLG 1
 You found a nice warm cup of tea
@@ -119,8 +293,64 @@ DLG 2
 A key! {wvy}What does it open?{wvy}
 NAME key dialog
 
-VAR a
-42
+DLG 3
+You took a gulp of {clr 0}牛奶 (niú nǎi - milk){/clr}, then hiccuped. 'Yikes, in the land where 茶 (chá - tea) reigns supreme, I've forgotten my furry dilemma: lactose intolerant! Perhaps embracing {wvy}中国茶文化 (Zhōngguó chá wénhuà - Chinese tea culture){/wvy} isn't just wise; it's necessary for survival!'
+NAME Start
+
+DLG 4
+You blink your eyes open and... {rbw}whoa{/rbw}, {wvy}where are you{/wvy}? Last thing you knew, you were cozying up for a nap, and now you're waking up to a whole new world! The signs, the smells, the bustling streets... they all hint you've somehow landed in {clr 0}Chin{/clr}a. But how? While your mind races to piece the puzzle together, your stomach growls louder than a thunderstorm. Uh-oh, you're not just confused; you're super hungry, too! Time to embark on a culinary quest for some delicious grub. Let's sniff out something yummy, shall we? {rbw}Adventure (and dinner) awaits!{/rbw}
+NAME Start dialog
+
+DLG 5
+You took a gulp of {wvy}牛奶 (niú nǎi - milk){/wvy}, then hiccuped. 'Yikes, in the land where {rbw}茶 (chá - tea){/rbw} reigns supreme, I've forgotten my furry dilemma: lactose intolerant! Perhaps embracing {clr 0}中国茶文化 (Zhōngguó chá wénhuà - Chinese tea culture){/clr} isn't just wise; it's necessary for survival!'
+NAME sprite c dialog
+
+DLG 6
+ 
+
+DLG 7
+"""
+{wvy}{/wvy}You approach a Kitty Nanny and ask how you can get in touch with your family and friends as all social media seems to be disabled here.
+Kitty nanny: "Oh, dear, in these parts, we usually just meow across the alleyways. But for Internet? Hmm, I've heard of this thing... VPN? V... P... Noodles? No, that's not right. I'm afraid I'm just not up to date with such things. But I can give you a subway ticket."
+{item "0" 1}Congrats! You now have {clr 0}the subway ticket{/clr}.
+"""
+NAME kitty nanny
+
+DLG 8
+"""
+You see a teenager kitty hanging around and try to ask him for help too.
+Kitty: "VPN is what you need to bypass the Great Firewall! Just tap here, swipe there, and voila! You're connected to the world. Here, let me show you."
+The Kitty Teenager helps set up a {rbw}VPN{/rbw} on your device.Good news! You get in touch with your family and friends, {clr 0}who give you money to book a flight back{/clr}!
+Now you have to go to the airport! Find the subway station!{item "1" 1}
+"""
+NAME Kitty
+
+DLG 9
+"""
+ You find the subway station! You know that? Subway is more often referred to as {wvy}Metro{/wvy} in China.{
+  - {item "0"} == 1 ?
+    {
+      - {item "1"} == 1 ?
+        {clr 0}Congrats!{/clr} You enter the subway.
+        {exit "Subway" 2 2}
+      - else ?
+        Sorry, but you don't have money for a flight.
+    }
+  - else ?
+    Sorry, but you don't have a subway ticket.
+}
+"""
+NAME Metro
+
+DLG a
+China, it'has been one purrfect adventure. You've got the memories and the slightly improved Mandarin skills. But now, it's time to {clr 0}head home{/clr}.
+NAME airport
+
+VAR ticket
+0
+
+VAR money
+0
 
 TUNE 1
 3d,0,0,0,3d5,0,0,0,3l,0,0,0,3s,0,0,0
@@ -1432,6 +1662,15 @@ function BitsySystem(name) {
 		self._free(tile);
 	};
 
+	this.deleteAllTiles = function() {
+		if (tilePoolStart != null) {
+			for (var i = 0; i < tilePoolSize; i++) {
+				var tile = tilePoolStart + i;
+				this.delete(tile);
+			}
+		}
+	};
+
 	this.fill = function(block, value) {
 		var len = memory.blocks[block].length;
 		for (var i = 0; i < len; i++) {
@@ -1548,7 +1787,7 @@ var bitsy = mainProcess.system;
 // is this the right place for this to live?
 var version = {
 	major: 8, // major changes
-	minor: 10, // smaller changes
+	minor: 9, // smaller changes
 	devBuildPhase: "RELEASE",
 };
 function getEngineVersion() {
@@ -7781,13 +8020,7 @@ this.GetFrameCount = function(drawingId) {
 // todo : forceReset option is hacky?
 this.ClearCache = function(forceReset) {
 	if (forceReset === undefined || forceReset === true) {
-		// delete all tiles from system memory before clearing the cache
-		for (var cacheId in drawingCache.render) {
-			var tiles = drawingCache.render[cacheId];
-			for (var i = 0; i < tiles.length; i++) {
-				bitsy.delete(tiles[i]);
-			}
-		}
+		bitsy.deleteAllTiles();
 	}
 
 	drawingCache.render = {};
