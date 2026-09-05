@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # My Art Endeavors
 
 ## My Reflection on the Critical Making Class
@@ -12,7 +15,7 @@ This journey has sparked within me a newfound sense of artistic vibe.
 
 - [Meme - Comics](comics.jpg)
 - [Hypertext - Twine](CriticalMaking.html)
-- [Minigame Learning Chinese - Bitsy](Bitsygame.html)
+- [Minigame Learning Chinese - Bitsy](bitsygame.html)
 - [Grammar - Tracery](Grammar.html)
 - [Narratives - Cherry Blossom - p5.js](indexjs.html)
 - [Code - Chilling Scenes - p5.js](scene.html)
