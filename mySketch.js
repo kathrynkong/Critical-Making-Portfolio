@@ -1,44 +1,35 @@
-// Modified from Daniel Shifman - codingtra.in
-// Starter Option One: Particles
-//Things to try:
-// - Change the words - try phrases for more narrative / poetics!
-// - Change the colors - try the background, and the words!
-// - Change the font and size of the words
-// - Change the particle system - try changing the starting points
-// - Change the movement - try playing with the alpha and direction
+// Cherry Blossom — digital-humanities concept words drift down like falling petals
+// Modified from Daniel Shiffman - codingtrain (Starter Option One: Particles)
 
 let bg;
 let song;
+let particles = [];
+
+const words = ["culture", "🌸", "analysis", "archives", "computational", "digital", "scholarship", "aesthetics", "platform", "code", "computing", "feminist", "critical", "materiality", "storytelling", "multimodal", "bias", "data", "visualization", "ethics", "network", "technologies", "algorithm", "interactive"];
 
 function preload() {
   bg = loadImage('Web_Photo_Editor.jpg');
-	song = loadSound('roa-music-walk-around(chosic.com).mp3');
+  song = loadSound('roa-music-walk-around(chosic.com).mp3');
 }
 
-particles = [];
-//Just like with Tracery, put anything you want in the ""s
-words = ["culture","🌸","analysis","archives","computational","digital","scholarship","aesthetics","platform","code","computing","feminist","critical","materiality","storytelling","multimodal","bias","data","visualization","ethics","network","technologies","Algorithm","interactive"]
 function setup() {
-	//This creates a canvas the size of the screen
   createCanvas(windowWidth, windowHeight);
-	song.loop(); // Play the sound on loop
+  song.loop();
 }
 
 function draw() {
-	//Replace this with any background color you choose
-	//Or you could load an image or try a gradient!
   background(bg);
-	//This creates the particles
-  for (let i = 0; i < 1; i++) { // Change 3 to 1
-    let p = new Particle();
-    particles.push(p);
+
+  // spawn a new petal-word every few frames, rather than every single frame,
+  // so the scene stays airy instead of clouding over
+  if (frameCount % 4 === 0) {
+    particles.push(new Particle());
   }
-	//This moves the particles
+
   for (let i = particles.length - 1; i >= 0; i--) {
     particles[i].update();
     particles[i].show();
     if (particles[i].finished()) {
-      // remove this particle
       particles.splice(i, 1);
     }
   }
@@ -46,66 +37,65 @@ function draw() {
 
 class Particle {
   constructor() {
-		//This sets the x value to anywhere - try using a static value
-    this.x = random (0, windowWidth);
-		//This keeps the y fixed - try reversing it using windowHeight
-    this.y = (0);
-		//This sets the range of x movement - try limiting it to + or -
-    this.vx = random(-1, 1);
-		//This sets the range of y movement - try reversing it
-    this.vy = random(2, 1);
-		//This sets the range of color - this is what keeps us in yellows
-		//Try using it for all three to create a broader range of color
-		//Or try changing the scale to use the full 0-255
-		this.color = random(100,230);
-		//This sets the starting alpha so it starts bright and fades 
-		//Try reversing it! you can start at 0, add 1, and stop at 255
-    this.alpha = 0;
-		//This picks a random word for each particle
-		this.text = random(words);
-		// Add a new property for font size
-    this.fontSize = random(3, 18);
-    // Add a new property for font
-    this.font = random(['Georgia', 'Verdana', 'Courier']); // Fonts
-		// Adjust y position based on font size
-    this.y = this.y - this.fontSize;
+    this.baseX = random(0, windowWidth);
+    this.x = this.baseX;
+    this.y = -20;
+    this.vy = random(0.6, 1.6);
+
+    // gentle side-to-side sway instead of a random horizontal drift,
+    // so particles fall more like real petals than confetti
+    this.swayAmount = random(20, 60);
+    this.swaySpeed = random(0.01, 0.03);
+    this.swayOffset = random(TWO_PI);
+    this.rotation = random(-0.15, 0.15);
+
+    this.age = 0;
+    this.lifespan = random(220, 340);
+    this.fontSize = random(10, 22);
+    this.font = random(['Georgia', 'Verdana', 'Courier']);
+    this.text = random(words);
+
+    // soft sakura palette: blush, sakura pink, near-white petal
+    const palettes = [
+      { r: [255, 235], g: [200, 235], b: [220, 245] },
+      { r: [255, 225], g: [150, 200], b: [190, 220] },
+      { r: [255, 245], g: [235, 250], b: [240, 255] },
+    ];
+    const p = random(palettes);
+    this.r = random(p.r[0], p.r[1]);
+    this.g = random(p.g[0], p.g[1]);
+    this.b = random(p.b[0], p.b[1]);
   }
 
   finished() {
-		//Change this to 255 if you reverse the fade
-    return this.alpha < 0;
+    return this.age > this.lifespan;
   }
 
   update() {
-    this.x += this.vx;
+    this.age += 1;
     this.y += this.vy;
-		//Change this to +1 if you reverse the fade
-    this.alpha += 1;
-  } 
+    this.x = this.baseX + sin(this.age * this.swaySpeed + this.swayOffset) * this.swayAmount;
+  }
+
+  // fade in, hold, then fade out — instead of only ever fading in,
+  // so petals actually disappear rather than piling up on screen forever
+  alpha() {
+    const t = this.age / this.lifespan;
+    if (t < 0.15) return map(t, 0, 0.15, 0, 235);
+    if (t > 0.75) return map(t, 0.75, 1, 235, 0);
+    return 235;
+  }
 
   show() {
-    // Add a white stroke around the text
-    stroke(255);
-    strokeWeight(0.2); // Adjust the thickness of the stroke as needed
-
-    // Define color ranges for light and deep pink
-    let colorRanges = [
-        {r: [255, 200], g: [105, 181], b: [180, 230]}, // Light pink
-        {r: [200, 255], g: [20, 60], b: [60, 100]}    // Deep pink
-    ];
-
-    // Randomly select a color range
-    let selectedRange = random(colorRanges);
-
-    // Generate random shades of pink within the selected range
-    let r = random(selectedRange.r[0], selectedRange.r[1]); // Red component
-    let g = random(selectedRange.g[0], selectedRange.g[1]); // Green component
-    let b = random(selectedRange.b[0], selectedRange.b[1]); // Blue component
-
-    fill(r, g, b, this.alpha);
-    textFont(this.font); // Set the font
-    textSize(this.fontSize); // Set the font size
-    text(this.text, this.x, this.y);
-}
-
+    push();
+    translate(this.x, this.y);
+    rotate(this.rotation * sin(this.age * 0.02));
+    noStroke();
+    fill(this.r, this.g, this.b, this.alpha());
+    textFont(this.font);
+    textSize(this.fontSize);
+    textAlign(CENTER, CENTER);
+    text(this.text, 0, 0);
+    pop();
+  }
 }
